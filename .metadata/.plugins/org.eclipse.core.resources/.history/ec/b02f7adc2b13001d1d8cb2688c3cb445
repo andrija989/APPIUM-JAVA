@@ -1,0 +1,24 @@
+package shop;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class browserAutomate extends baseChrome {
+
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+		AndroidDriver driver = capabilities("General-store.apk");
+		driver.get("https://www.vivifyideas.com/");
+		driver.findElement(By.className("MenuButton__MenuButton-wkt62g-2")).click();
+		driver.findElement(By.xpath("//a[contains(@class, 'iWWGhb') and text() = 'Academy']")).click();
+		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		Thread.sleep(5000);
+		js.executeScript("window.scrollBy(0,1400)", "");
+		driver.findElements(By.className("register-icon")).get(0).click();
+	}
+
+}

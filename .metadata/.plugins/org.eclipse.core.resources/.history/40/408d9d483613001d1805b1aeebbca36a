@@ -1,0 +1,15 @@
+package shop;
+
+import java.net.MalformedURLException;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class login extends base {
+
+	public static void main(String[] args) throws MalformedURLException {
+		@SuppressWarnings("unused")
+		AndroidDriver driver = capabilities("General-Store.apk");
+
+	}
+
+}

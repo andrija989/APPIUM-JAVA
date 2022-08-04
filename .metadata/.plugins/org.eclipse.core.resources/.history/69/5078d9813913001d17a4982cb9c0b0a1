@@ -1,0 +1,16 @@
+package shop;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.By;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class login extends Base {
+
+	public static void main(String[] args) throws MalformedURLException {
+		AndroidDriver driver = capabilities();
+
+	}
+
+}
